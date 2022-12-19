@@ -1,0 +1,28 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>Inventory App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{ title }}</h1>
+      <hr>
+      <header id="header">
+        <nav class="links" style="--items: 2;">
+            <a href="index.html">Home</a>
+            <a href="https://www.stemminds.com/" target="_blank"><img src="/static/download.jfif" height="60px"></a>
+            <span class="line"></span>
+        </nav>
+      </header>
+      {% block content %}{% endblock %}
+    </div>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.js"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
